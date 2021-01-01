@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+    <style type="text/css">
+    	body
+    	{
+    		background-image: url({{ url_for('static',filename='04.jpg')  }});
+    	}
+    	#tab
+    	{
+    		color: red;
+    		margin-top: 100px;
+    		font-style: bold;
+    		font-size: 25px;
+    	}
+    </style>
+</head>
+<body>
+	<table border="1" id="tab">
+		<Tr>
+			<Td>Name</Td>
+			<td>{{data[1]}} {{data[2]}}</td>
+		</Tr>
+		<Tr>
+			<Td>Gender</Td>
+			<td>{{data[4]}}</td>
+		</Tr>
+		<Tr>
+			<Td>Date of Birth</Td>
+			<td>{{data[3]}}</td>
+		</Tr>
+		<Tr>
+			<Td>Experience</Td>
+			<td>{{data[5]}}</td>
+		</Tr>
+		<Tr>
+			<Td>Hobbies</Td>
+			<td>
+				<ol>
+					{%for per in data2%}
+					<li>{{per[0]}}</li>
+					{%endfor%}
+					
+				</ol>
+			</td>
+		</Tr>
+	</table>
+
+</body>
+</html>

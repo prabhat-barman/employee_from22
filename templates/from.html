@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>from</title>
+	<style type="text/css">
+		body
+		{
+			background-image: url({{ url_for('static',filename='01.jpg')  }});
+		 	background-size:100% 200%;
+		}
+		#head
+		{
+			text-align: center;
+			color: #ffbf80;
+		}
+		#detail
+		{
+			margin: auto;
+			height: 600px;
+			width: 400px;
+			padding-top: 5px;
+			line-height: 30px;
+			font-weight: bold;
+			
+		}
+		#sub
+		{
+			margin-left: 150px;
+		}
+
+
+		
+	</style>
+</head>
+<body>
+	<h1 id="head">Employee Registration From</h1>
+	<div id="detail">
+
+	<form action="/detail" method="POST" enctype="multipart/form-data">
+	<table>
+		<Tr>
+			<td>Enter your first name :</td><Td><input type="text" name="fn"></td>
+		</tr>
+		<Tr>
+			<td>Enter your last name  :</td><Td><input type="text" name="ln"></td>
+		</Tr>
+		<tr>
+			<td>Enter your dob:</td><td><input type="date" name="dob"></td>
+		</tr>
+
+		<tr><td>Hobbies               :</td>
+			<td>
+				<input type="checkbox" name="hobby" value="Watching TV"/>Watching TV
+			    <br/>
+			    <input type="checkbox" name="hobby" value="Reading Books"/>Reading Books
+			    <br/>
+			    <input type="checkbox" name="hobby" value="Listening Music"/>Listening Music
+			</td>
+		</tr>
+		<tr>
+			<td> Select your Gender   : </td>
+					<td><input type="radio" name="gender" value="male">male
+					<br/>
+	      			<input type="radio" name="gender" value="female">female</td>
+		</tr>
+	<tr><td>Input your Experience :</td><td><select name="experience"> 
+								<option>1 year</option>
+								<option>2 year</option>
+								<option>3 year</option>
+								<option>4 year</option>
+							</select></td>
+	</tr>
+	<tr>
+		<td>
+			<p>Select File: <input type="file" name="photo"></p>
+		</td>
+	</tr>
+	<td colspan="2" align="center"><input type="submit" name="submit"></td>
+	</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+	<table border="1">
+		<tr><th>first name</th><td>{{info[0]}}</td></tr>
+		<tr><th>last name</th><td>{{info[1]}}</td></tr>
+		<tr><th>dob</th><td>{{info[2]}}</td></tr>
+		<tr><th>gender</th><td>{{info[3]}}</td></tr>
+		<tr><th>hobbies</th><td>
+			{%
+				for hobby in info[4]:
+			%}
+			{{hobby}}
+			{%
+				endfor
+			%}
+
+
+		</td></tr>
+		<tr><th>exprience</th><td>{{info[5]}}</td></tr>
+	</table>
+
+</body>
+</html>

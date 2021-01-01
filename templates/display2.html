@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+	<style type="text/css">
+		body
+		{
+			background-image: url({{url_for('static',filename='03.jpg')}})
+			
+		}
+		#tab
+		{
+			color:#b3ffcc;
+			margin: auto;
+		}
+		#h1
+		{
+			text-align: center;
+			color: #00802b;
+		}
+		#tab th
+		{
+			color: #66ff66;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="h1">Employee Detail</h1>
+	<table border="1" cellpadding="20" id="tab">
+		<tr>
+		<th>Sno.</th>
+		<th>Name</th>
+		
+		<th>Gender</th>
+		<th>Experience</th>
+		<th>Profile</th>
+		<th>Delete</th>
+		</tr>
+		{% for emp in data: %}
+		<tr>
+			<Td>{{emp[0]}}</Td>
+			<Td>{{emp[1]}} {{emp[2]}}</Td>
+		
+			<Td>{{emp[4]}}</Td>
+			<Td>{{emp[5]}}</Td>
+			<Td><a href="/profile?eid={{emp[0]}}"><input type="button" value="View Profile"></a></Td>
+			<td><a href="/deleteemp?eid={{emp[0]}}"><input type="button" value="Delete"></a></td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

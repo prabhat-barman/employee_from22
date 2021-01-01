@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style type="text/css">
+    	body
+    	{
+    		background-image: url({{ url_for('static',filename='02.jpg')  }});
+		 	background-size:100% 200%;
+    	}
+    	#login_box
+    	{
+    		width: 500px;
+    		height: 600px;
+    		background-color: black;
+    		color: white;
+    		text-align: center;
+    		font-size: 25px;
+    		margin:auto;
+
+    	}
+    	#id
+    	{
+    		background-color: white;
+    		color: black;
+    		font-size: 18px;
+    		text-align: center;
+    		margin: auto;
+    		margin-top: 50px;
+    		height: 200px;
+    		width: 300px;
+    		padding-top:100px;
+    		font-family:'Comic Sans MS';
+    		font-weight: bold;
+    	}
+    	
+    	input[type="text"],input[type="password"]
+    	{
+    		height: 30px;
+    		border-radius:10px 0px 10px 0px;
+    		box-shadow:2px 2px 2px grey;
+    	}
+    	#log
+    	{
+    		margin: auto;
+    		margin-top: 5px;
+    		font-size: 25px;
+    		color: #ffffb3;
+    		padding-top: 35px;
+    	}
+    	#sub
+    	{
+    		font-weight: bold;
+    		font-size: 20px;
+    		font-family:'Comic Sans MS'; 
+    	}
+    </style>
+</head>
+<body>
+	<div id="login_box">
+		<p id="log">Login Here</p>
+		<div id="id">
+
+			<p>Id Name  : <input type="text" name="text"></p>
+			<p>Password :<input type="Password" name="Password"></p>
+			<p id="sub"><input type="submit" value="Login"></p>
+		</div>
+
+	   <p><a href="/userreg">Registration</a></p>
+	   <p><a href="/getData">Record</a></p>
+	</div>
+
+
+</body>
+</html>
